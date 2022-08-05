@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -76,7 +77,6 @@ class ProdController extends Controller
      */
     public function search($name)
     {
-        return Product::where('name','like','%'.$name.'%')->get();
+        return Product::where('name', 'like', '%' . $name . '%')->get();
     }
-
 }
